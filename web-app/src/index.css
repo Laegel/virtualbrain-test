@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Design tokens: RGB triplets so Tailwind can apply opacity (bg-accent/10). Components never use raw colors. */
+:root {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --surface-2: 241 245 249;
+  --border: 226 232 240;
+  --fg: 15 23 42;
+  --muted: 100 116 139;
+  --accent: 79 70 229;
+  --accent-fg: 255 255 255;
+  --danger: 220 38 38;
+
+  --type-normal: 107 114 128;
+  --type-fire: 220 80 30;
+  --type-water: 37 99 235;
+  --type-electric: 180 120 4;
+  --type-grass: 22 130 60;
+  --type-ice: 14 148 165;
+  --type-fighting: 185 28 28;
+  --type-poison: 147 51 234;
+  --type-ground: 161 98 7;
+  --type-flying: 99 102 241;
+  --type-psychic: 219 39 119;
+  --type-bug: 101 140 20;
+  --type-rock: 120 113 108;
+  --type-ghost: 88 28 135;
+  --type-dragon: 109 40 217;
+  --type-dark: 55 65 81;
+  --type-steel: 82 120 140;
+  --type-fairy: 214 100 160;
+}
+
+:root.dark {
+  --bg: 11 15 25;
+  --surface: 20 27 42;
+  --surface-2: 30 41 59;
+  --border: 51 65 85;
+  --fg: 241 245 249;
+  --muted: 148 163 184;
+  --accent: 129 140 248;
+  --accent-fg: 15 23 42;
+  --danger: 248 113 113;
+}
+
+@layer base {
+  html { color-scheme: light; }
+  html.dark { color-scheme: dark; }
+  body { @apply bg-bg text-fg antialiased; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-accent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
