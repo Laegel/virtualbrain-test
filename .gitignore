@@ -1,53 +1,6 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-dist
-build
-tmp
-/out-tsc
-
-# dependencies
 node_modules
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.cursorrules
-
-# Env
+dist
 .env
-.env.scripts
-
-# Docker
-.docker
-
-# nixox
-.envrc
-.direnv
-.npm-global
-shell.nix
-
-# python
-__pycache__
-.venv
-
-# Next.js
-.next
-
-# NX
-.nx
-
-# Eslint
-.eslintcache
+.env*.local
+.cache
+.DS_Store
