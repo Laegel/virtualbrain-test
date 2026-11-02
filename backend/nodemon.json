@@ -1,5 +1,5 @@
 {
 	"ext": "js,ts,json",
-	"exec": "ts-node --project ./tsconfig.app.json ./src/app.ts"
-  }
-  
+	"ignore": ["src/**/*.spec.ts", "exports/*", ".cache/*"],
+	"exec": "ts-node --project ./tsconfig.app.json ./src/main.ts"
+}

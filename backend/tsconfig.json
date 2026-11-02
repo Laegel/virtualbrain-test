@@ -1,17 +1,16 @@
 {
 	"compilerOptions": {
-	  "module": "commonjs",
-	  "target": "ES2020",
-	  "moduleResolution": "node",
-	  "esModuleInterop": true,
-	  "outDir": "dist",
-	  "strict": true
+		"module": "commonjs",
+		"target": "ES2022",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"outDir": "dist",
+		"strict": true,
+		"skipLibCheck": true
 	},
 	"files": [],
 	"include": [],
-	"references": [
-	  {
-		"path": "./tsconfig.app.json"
-	  }
-	]
-  }
+	"references": [{ "path": "./tsconfig.app.json" }]
+}
